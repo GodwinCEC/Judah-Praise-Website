@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Judah Praise 2026 | CMF-KATH Ghana</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Get in touch with Judah Praise team. Contact CMF-KATH Ghana for partnerships, large donations, media inquiries, or questions about our stroke care project.">
+    <meta name="keywords" content="Contact Judah Praise, CMF-KATH Ghana contact, medical charity contact, stroke project inquiry">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+    .page-header {
+        background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+        color: var(--color-white);
+        padding: calc(70px + var(--spacing-2xl)) 0 var(--spacing-2xl) 0;
+        text-align: center;
+    }
+
+    .page-header h1 {
+        color: var(--color-white);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .contact-section {
+        padding: var(--spacing-3xl) 0;
+        background-color: var(--color-off-white);
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-2xl);
+        align-items: start;
+    }
+
+    .contact-form {
+        background: var(--color-white);
+        padding: var(--spacing-2xl);
+        border-radius: var(--border-radius-lg);
+        box-shadow: var(--shadow-light);
+        border-top: 4px solid var(--color-primary);
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xl);
+    }
+
+    .info-card {
+        background: var(--color-white);
+        padding: var(--spacing-xl);
+        border-radius: var(--border-radius-lg);
+        box-shadow: var(--shadow-light);
+        border-left: 4px solid var(--color-primary);
+    }
+
+    .info-icon {
+        font-size: 2.5rem;
+        margin-bottom: var(--spacing-md);
+        color: var(--color-primary);
+        display: block;
+    }
+
+    .info-card h3 {
+        color: var(--color-primary);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .info-card p {
+        color: var(--color-text-light);
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .info-card a {
+        color: var(--color-primary);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color var(--transition-base);
+    }
+
+    .info-card a:hover {
+        color: var(--color-primary-dark);
+    }
+
+    .form-group {
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: var(--spacing-xs);
+        font-weight: 500;
+        color: var(--color-text);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: var(--spacing-md);
+        border: 2px solid var(--color-gray);
+        border-radius: var(--border-radius);
+        font-size: 1rem;
+        font-family: var(--font-body);
+        transition: border-color var(--transition-base);
+        resize: vertical;
+    }
+
+    .form-group textarea {
+        min-height: 120px;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: var(--color-primary);
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .social-section {
+        background: var(--color-white);
+        padding: var(--spacing-3xl) 0;
+        text-align: center;
+    }
+
+    .social-section h2 {
+        color: var(--color-primary);
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .social-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--spacing-xl);
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .social-card {
+        background: var(--color-light-gray);
+        padding: var(--spacing-xl);
+        border-radius: var(--border-radius-lg);
+        transition: all var(--transition-base);
+        text-decoration: none;
+        color: inherit;
+        border: 2px solid transparent;
+    }
+
+    .social-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--color-primary);
+        background: var(--color-white);
+        box-shadow: var(--shadow-medium);
+    }
+
+    .social-icon {
+        font-size: 3rem;
+        margin-bottom: var(--spacing-md);
+        display: block;
+        color: var(--color-primary);
+    }
+
+    .social-card h3 {
+        color: var(--color-primary);
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .social-card p {
+        color: var(--color-text-light);
+        margin: 0;
+    }
+
+    .team-section {
+        background: var(--color-off-white);
+        padding: var(--spacing-3xl) 0;
+    }
+
+    .team-section h2 {
+        text-align: center;
+        color: var(--color-primary);
+        margin-bottom: var(--spacing-2xl);
+    }
+
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--spacing-xl);
+    }
+
+    .team-card {
+        background: var(--color-white);
+        padding: var(--spacing-xl);
+        border-radius: var(--border-radius-lg);
+        text-align: center;
+        box-shadow: var(--shadow-light);
+        border-top: 4px solid var(--color-primary);
+    }
+
+    .team-avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+        margin: 0 auto var(--spacing-md) auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: var(--color-white);
+    }
+
+    .team-card h4 {
+        color: var(--color-primary);
+        margin-bottom: var(--spacing-xs);
+    }
+
+    .team-role {
+        color: var(--color-text-light);
+        font-size: 0.875rem;
+        margin-bottom: var(--spacing-md);
+        font-style: italic;
+    }
+
+    .team-card p {
+        color: var(--color-text-light);
+        font-size: 0.875rem;
+        margin: 0;
+    }
+
+    .faq-section {
+        background: var(--color-white);
+        padding: var(--spacing-3xl) 0;
+    }
+
+    .faq-section h2 {
+        text-align: center;
+        color: var(--color-primary);
+        margin-bottom: var(--spacing-2xl);
+    }
+
+    .faq-list {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .faq-item {
+        margin-bottom: var(--spacing-lg);
+        border: 2px solid var(--color-light-gray);
+        border-radius: var(--border-radius);
+        overflow: hidden;
+    }
+
+    .faq-question {
+        background: var(--color-light-gray);
+        padding: var(--spacing-lg);
+        font-weight: 600;
+        color: var(--color-primary);
+        cursor: pointer;
+        transition: background-color var(--transition-base);
+        border: none;
+        width: 100%;
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    .faq-question:hover {
+        background: var(--color-gray);
+    }
+
+    .faq-answer {
+        padding: var(--spacing-lg);
+        background: var(--color-white);
+        color: var(--color-text-light);
+        line-height: 1.6;
+        display: none;
+    }
+
+    .success-message {
+        background: #F0FDF4;
+        color: #16A34A;
+        padding: var(--spacing-md);
+        border-radius: var(--border-radius);
+        border: 1px solid #BBF7D0;
+        margin-bottom: var(--spacing-md);
+        display: none;
+    }
+
+    .error-message {
+        background: #FEF2F2;
+        color: #DC2626;
+        padding: var(--spacing-md);
+        border-radius: var(--border-radius);
+        border: 1px solid #FECACA;
+        margin-bottom: var(--spacing-md);
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        .contact-grid {
+            grid-template-columns: 1fr;
+            gap: var(--spacing-xl);
+        }
+
+        .form-row {
+            grid-template-columns: 1fr;
+        }
+
+        .social-grid,
+        .team-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .contact-form,
+        .info-card {
+            padding: var(--spacing-lg);
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="../">
+                    <img src="../assets/images/icons/logo.png" alt="Judah Praise" class="logo" width="120" height="40">
+                </a>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../" class="nav-link">Home</a></li>
+                <li><a href="impact.html" class="nav-link">Past Impact</a></li>
+                <li><a href="donate.html" class="nav-link">Donate</a></li>
+                <li><a href="store.html" class="nav-link">Store</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>Connect With Our Mission</h1>
+                <p class="lead">
+                    Whether you're interested in partnerships, have questions about our projects, 
+                    or want to explore how you can make an impact—we're here to listen and collaborate.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h2 style="color: var(--color-primary); margin-bottom: var(--spacing-lg);">Send Us a Message</h2>
+                    
+                    <div class="success-message" id="successMessage">
+                        Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.
+                    </div>
+                    <div class="error-message" id="errorMessage">
+                        Sorry, there was an error sending your message. Please try again or contact us directly.
+                    </div>
+
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="+233 XX XXX XXXX">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="partnership">Partnership Inquiry</option>
+                                <option value="donation">Large Donation/Sponsorship</option>
+                                <option value="media">Media/Press Inquiry</option>
+                                <option value="volunteer">Volunteer Opportunity</option>
+                                <option value="general">General Question</option>
+                                <option value="technical">Technical Issue</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" placeholder="Please tell us how we can help you..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">
+                            📤 Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <span class="info-icon">📧</span>
+                        <h3>Email Us</h3>
+                        <p>For general inquiries and information</p>
+                        <a href="mailto:info@judahpraise.org">info@judahpraise.org</a>
+                        <p style="margin-top: var(--spacing-sm);">For partnerships and media</p>
+                        <a href="mailto:partnerships@judahpraise.org">partnerships@judahpraise.org</a>
+                    </div>
+
+                    <div class="info-card">
+                        <span class="info-icon">📱</span>
+                        <h3>Call or WhatsApp</h3>
+                        <p>Direct contact with our team</p>
+                        <a href="tel:+233XXXXXXXX">+233 XX XXX XXXX</a>
+                        <p style="margin-top: var(--spacing-sm); font-size: 0.875rem;">
+                            Available Monday - Friday, 8:00 AM - 5:00 PM (Ghana Time)
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <span class="info-icon">🏥</span>
+                        <h3>Visit Us</h3>
+                        <p>Christian Medical Fellowship</p>
+                        <p>Komfo Anokye Teaching Hospital</p>
+                        <p>Kumasi, Ghana</p>
+                        <p style="margin-top: var(--spacing-sm); font-size: 0.875rem;">
+                            Office visits by appointment only
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <span class="info-icon">⏰</span>
+                        <h3>Response Time</h3>
+                        <p><strong>General inquiries:</strong> Within 24 hours</p>
+                        <p><strong>Partnership inquiries:</strong> Within 48 hours</p>
+                        <p><strong>Urgent matters:</strong> Same day (call directly)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-section">
+        <div class="container">
+            <h2>Follow Our Journey</h2>
+            <p style="max-width: 600px; margin: 0 auto var(--spacing-xl) auto; color: var(--color-text-light);">
+                Stay connected with daily updates, behind-the-scenes content, and stories of 
+                transformation from the hospital floors to concert stages.
+            </p>
+            
+            <div class="social-grid">
+                <a href="https://facebook.com/judahpraise" target="_blank" class="social-card">
+                    <span class="social-icon">📘</span>
+                    <h3>Facebook</h3>
+                    <p>Daily updates, live videos, and community discussions</p>
+                </a>
+
+                <a href="https://instagram.com/judahpraise" target="_blank" class="social-card">
+                    <span class="social-icon">📷</span>
+                    <h3>Instagram</h3>
+                    <p>Behind-the-scenes photos and inspiring patient stories</p>
+                </a>
+
+                <a href="https://twitter.com/judahpraise" target="_blank" class="social-card">
+                    <span class="social-icon">🐦</span>
+                    <h3>Twitter</h3>
+                    <p>Real-time updates and healthcare advocacy</p>
+                </a>
+
+                <a href="https://youtube.com/judahpraise" target="_blank" class="social-card">
+                    <span class="social-icon">📺</span>
+                    <h3>YouTube</h3>
+                    <p>Concert highlights and impact documentaries</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2>Meet Our Leadership</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">👨‍⚕️</div>
+                    <h4>Dr. Emmanuel Asante</h4>
+                    <div class="team-role">Project Director</div>
+                    <p>Leading the medical strategy and hospital partnerships with 15+ years in healthcare management.</p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-avatar">👩‍💼</div>
+                    <h4>Grace Osei</h4>
+                    <div class="team-role">Operations Manager</div>
+                    <p>Coordinating fundraising events and community outreach with expertise in nonprofit management.</p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-avatar">👨‍🎤</div>
+                    <h4>Pastor Michael Owusu</h4>
+                    <div class="team-role">Concert Director</div>
+                    <p>Organizing the annual Judah Praise concert and spiritual oversight of the mission.</p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-avatar">👩‍⚕️</div>
+                    <h4>Dr. Sarah Mensah</h4>
+                    <div class="team-role">Medical Advisor</div>
+                    <p>Stroke specialist providing clinical expertise and equipment selection guidance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">How can I partner with Judah Praise?</button>
+                    <div class="faq-answer">
+                        We welcome partnerships with churches, businesses, medical organizations, and individuals. 
+                        Contact us at partnerships@judahpraise.org to discuss sponsorship opportunities, 
+                        in-kind donations, or collaborative initiatives that align with our mission.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Can international organizations get involved?</button>
+                    <div class="faq-answer">
+                        Absolutely! We work with international medical equipment suppliers, diaspora organizations, 
+                        and global health nonprofits. We can provide official documentation for international 
+                        grants and facilitate equipment shipping to Ghana.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">How do you ensure donation transparency?</button>
+                    <div class="faq-answer">
+                        We publish quarterly financial reports, equipment purchase receipts, and impact metrics 
+                        on our website. All major donors receive detailed updates on how their contributions 
+                        are used, including photos and testimonials from beneficiaries.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Do you offer volunteer opportunities?</button>
+                    <div class="faq-answer">
+                        Yes! We need volunteers for event planning, social media, patient story documentation, 
+                        and fundraising campaigns. Medical professionals can also volunteer for equipment 
+                        training and clinical mentorship programs.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">How often do you host the Judah Praise concert?</button>
+                    <div class="faq-answer">
+                        The main Judah Praise concert is held annually, typically in December. We also host 
+                        smaller fundraising events throughout the year. Follow our social media for updates 
+                        on upcoming events and ticket information.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Contact -->
+    <section style="background: var(--color-primary); color: var(--color-white); padding: var(--spacing-xl) 0; text-align: center;">
+        <div class="container">
+            <h3 style="color: var(--color-white); margin-bottom: var(--spacing-md);">🚨 Urgent Medical Equipment Needs?</h3>
+            <p style="margin-bottom: var(--spacing-lg); color: rgba(255, 255, 255, 0.9);">
+                For time-sensitive medical equipment emergencies at the hospital, 
+                contact our emergency response team directly.
+            </p>
+            <a href="tel:+233XXXXXXXX" class="btn btn-outline btn-large">Emergency Hotline: +233 XX XXX XXXX</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Judah Praise 2026</h3>
+                    <p>CMF-KATH Ghana</p>
+                    <p>Christian Medical Fellowship</p>
+                    <p>Komfo Anokye Teaching Hospital</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../">Home</a></li>
+                        <li><a href="impact.html">Past Impact</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="store.html">Store</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@judahpraise.org</p>
+                    <p>Phone: +233 XX XXX XXXX</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Office Hours</h4>
+                    <p>Monday - Friday</p>
+                    <p>8:00 AM - 5:00 PM</p>
+                    <p>Ghana Standard Time</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Judah Praise | CMF-KATH Ghana | All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+    
+    <script>
+    // Contact form handler
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const successMsg = document.getElementById('successMessage');
+        const errorMsg = document.getElementById('errorMessage');
+        
+        // Hide any previous messages
+        successMsg.style.display = 'none';
+        errorMsg.style.display = 'none';
+        
+        // Get form data
+        const formData = {
+            firstName: document.getElementById('firstName').value,
+            lastName: document.getElementById('lastName').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            subject: document.getElementById('subject').value,
+            message: document.getElementById('message').value
+        };
+        
+        // Here you would typically send to your backend/email service
+        // For now, we'll simulate success
+        setTimeout(() => {
+            successMsg.style.display = 'block';
+            this.reset();
+            
+            // Scroll to success message
+            successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 1000);
+    });
+
+    // FAQ functionality
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', function() {
+            const answer = this.nextElementSibling;
+            const isOpen = answer.style.display === 'block';
+            
+            // Close all answers
+            document.querySelectorAll('.faq-answer').forEach(ans => {
+                ans.style.display = 'none';
+            });
+            
+            // Open clicked answer if it wasn't already open
+            if (!isOpen) {
+                answer.style.display = 'block';
+            }
+        });
+    });
+    </script>
+</body>
+</html>

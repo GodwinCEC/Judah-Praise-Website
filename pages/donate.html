@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate & Sponsor | Judah Praise 2026 | Support Stroke Care Ghana</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Support Judah Praise 2026 stroke care project. Donate via Mobile Money (MTN, Vodafone, AirtelTigo), Card payments, or international GoFundMe. Every donation saves lives.">
+    <meta name="keywords" content="Ghana mobile money donation, Paystack donation, stroke care funding, CMF-KATH support, international donation GoFundMe">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+    .page-header {
+        background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+        color: var(--color-white);
+        padding: calc(70px + var(--spacing-2xl)) 0 var(--spacing-2xl) 0;
+        text-align: center;
+    }
+
+    .page-header h1 {
+        color: var(--color-white);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .donation-section {
+        padding: var(--spacing-3xl) 0;
+        background-color: var(--color-off-white);
+    }
+
+    .donation-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: var(--spacing-2xl);
+        margin-bottom: var(--spacing-2xl);
+    }
+
+    .donation-method {
+        background: var(--color-white);
+        padding: var(--spacing-2xl);
+        border-radius: var(--border-radius-lg);
+        box-shadow: var(--shadow-light);
+        text-align: center;
+        border-top: 4px solid var(--color-primary);
+        transition: all var(--transition-base);
+    }
+
+    .donation-method:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-medium);
+    }
+
+    .donation-icon {
+        font-size: 4rem;
+        margin-bottom: var(--spacing-lg);
+        display: block;
+    }
+
+    .donation-method h3 {
+        color: var(--color-primary);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .donation-method p {
+        margin-bottom: var(--spacing-lg);
+        color: var(--color-text-light);
+    }
+
+    .amount-selector {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-sm);
+        margin: var(--spacing-lg) 0;
+    }
+
+    .amount-btn {
+        padding: var(--spacing-md);
+        border: 2px solid var(--color-gray);
+        background: var(--color-white);
+        color: var(--color-text);
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        font-weight: 500;
+        transition: all var(--transition-base);
+        text-align: center;
+    }
+
+    .amount-btn:hover,
+    .amount-btn.active {
+        border-color: var(--color-primary);
+        background-color: var(--color-primary);
+        color: var(--color-white);
+    }
+
+    .custom-amount {
+        margin-top: var(--spacing-md);
+    }
+
+    .custom-amount input {
+        width: 100%;
+        padding: var(--spacing-md);
+        border: 2px solid var(--color-gray);
+        border-radius: var(--border-radius);
+        font-size: 1rem;
+        transition: border-color var(--transition-base);
+    }
+
+    .custom-amount input:focus {
+        outline: none;
+        border-color: var(--color-primary);
+    }
+
+    .momo-options {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-sm);
+        margin: var(--spacing-lg) 0;
+    }
+
+    .momo-btn {
+        padding: var(--spacing-md);
+        border: 2px solid var(--color-gray);
+        background: var(--color-white);
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        transition: all var(--transition-base);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-xs);
+    }
+
+    .momo-btn:hover,
+    .momo-btn.active {
+        border-color: var(--color-primary);
+        background-color: var(--color-light-gray);
+    }
+
+    .momo-logo {
+        font-size: 1.5rem;
+    }
+
+    .momo-name {
+        font-size: 0.875rem;
+        font-weight: 500;
+    }
+
+    .trust-indicators {
+        background: var(--color-white);
+        padding: var(--spacing-2xl) 0;
+        border-top: 1px solid var(--color-gray);
+        border-bottom: 1px solid var(--color-gray);
+    }
+
+    .trust-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: var(--spacing-xl);
+        text-align: center;
+    }
+
+    .trust-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .trust-icon {
+        font-size: 2.5rem;
+        margin-bottom: var(--spacing-md);
+        color: var(--color-primary);
+    }
+
+    .trust-item h4 {
+        margin-bottom: var(--spacing-sm);
+        color: var(--color-primary);
+    }
+
+    .trust-item p {
+        color: var(--color-text-light);
+        font-size: 0.875rem;
+        margin: 0;
+    }
+
+    .international-section {
+        background: var(--color-white);
+        padding: var(--spacing-3xl) 0;
+    }
+
+    .international-content {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .international-content h2 {
+        color: var(--color-primary);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .gofundme-card {
+        background: linear-gradient(135deg, #02A95C 0%, #00D775 100%);
+        color: var(--color-white);
+        padding: var(--spacing-2xl);
+        border-radius: var(--border-radius-lg);
+        margin: var(--spacing-xl) 0;
+        box-shadow: var(--shadow-medium);
+    }
+
+    .gofundme-card h3 {
+        color: var(--color-white);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .payment-form {
+        background: var(--color-light-gray);
+        padding: var(--spacing-xl);
+        border-radius: var(--border-radius);
+        margin-top: var(--spacing-lg);
+    }
+
+    .form-group {
+        margin-bottom: var(--spacing-md);
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: var(--spacing-xs);
+        font-weight: 500;
+        color: var(--color-text);
+    }
+
+    .form-group input,
+    .form-group select {
+        width: 100%;
+        padding: var(--spacing-md);
+        border: 2px solid var(--color-gray);
+        border-radius: var(--border-radius);
+        font-size: 1rem;
+        transition: border-color var(--transition-base);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+        outline: none;
+        border-color: var(--color-primary);
+    }
+
+    .payment-summary {
+        background: var(--color-white);
+        padding: var(--spacing-lg);
+        border-radius: var(--border-radius);
+        border: 2px solid var(--color-primary);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .summary-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .summary-total {
+        font-weight: 600;
+        font-size: 1.25rem;
+        color: var(--color-primary);
+        border-top: 1px solid var(--color-gray);
+        padding-top: var(--spacing-sm);
+    }
+
+    .error-message {
+        background: #FEF2F2;
+        color: #DC2626;
+        padding: var(--spacing-md);
+        border-radius: var(--border-radius);
+        border: 1px solid #FECACA;
+        margin-bottom: var(--spacing-md);
+        display: none;
+    }
+
+    .success-message {
+        background: #F0FDF4;
+        color: #16A34A;
+        padding: var(--spacing-md);
+        border-radius: var(--border-radius);
+        border: 1px solid #BBF7D0;
+        margin-bottom: var(--spacing-md);
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        .donation-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .amount-selector,
+        .momo-options {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .donation-method {
+            padding: var(--spacing-lg);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .amount-selector,
+        .momo-options {
+            grid-template-columns: 1fr;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="../">
+                    <img src="../assets/images/icons/logo.png" alt="Judah Praise" class="logo" width="120" height="40">
+                </a>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../" class="nav-link">Home</a></li>
+                <li><a href="impact.html" class="nav-link">Past Impact</a></li>
+                <li><a href="donate.html" class="nav-link active">Donate</a></li>
+                <li><a href="store.html" class="nav-link">Store</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>Support the Stroke Care Mission</h1>
+                <p class="lead">
+                    Your donation directly purchases life-saving stroke monitoring equipment for 
+                    Komfo Anokye Teaching Hospital. Choose your preferred payment method below 
+                    and join thousands of others in making healing possible.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Methods Section -->
+    <section class="donation-section">
+        <div class="container">
+            <h2 style="text-align: center; color: var(--color-primary); margin-bottom: var(--spacing-2xl);">Choose Your Donation Method</h2>
+            
+            <div class="donation-grid">
+                <!-- Mobile Money & Card (Ghana) -->
+                <div class="donation-method">
+                    <div class="donation-icon">📱</div>
+                    <h3>Mobile Money & Cards</h3>
+                    <p>For donors in Ghana - Pay with MTN MoMo, Vodafone Cash, AirtelTigo Money, or any Visa/Mastercard. Secure payments powered by Paystack.</p>
+                    
+                    <!-- Amount Selection -->
+                    <div class="amount-selector">
+                        <button class="amount-btn" data-amount="50">GH₵ 50</button>
+                        <button class="amount-btn" data-amount="100">GH₵ 100</button>
+                        <button class="amount-btn" data-amount="200">GH₵ 200</button>
+                        <button class="amount-btn" data-amount="500">GH₵ 500</button>
+                        <button class="amount-btn" data-amount="1000">GH₵ 1,000</button>
+                        <button class="amount-btn" data-amount="2000">GH₵ 2,000</button>
+                    </div>
+
+                    <div class="custom-amount">
+                        <input type="number" id="customAmount" placeholder="Enter custom amount (GH₵)" min="10">
+                    </div>
+
+                    <!-- Mobile Money Options -->
+                    <div class="momo-options">
+                        <div class="momo-btn" data-channel="mtn">
+                            <span class="momo-logo">📱</span>
+                            <span class="momo-name">MTN MoMo</span>
+                        </div>
+                        <div class="momo-btn" data-channel="vodafone">
+                            <span class="momo-logo">📞</span>
+                            <span class="momo-name">Vodafone</span>
+                        </div>
+                        <div class="momo-btn" data-channel="airteltigo">
+                            <span class="momo-logo">📲</span>
+                            <span class="momo-name">AirtelTigo</span>
+                        </div>
+                    </div>
+
+                    <!-- Donation Form -->
+                    <div class="payment-form">
+                        <div class="error-message" id="errorMessage"></div>
+                        <div class="success-message" id="successMessage"></div>
+                        
+                        <div class="form-group">
+                            <label for="donorName">Full Name *</label>
+                            <input type="text" id="donorName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="donorEmail">Email Address *</label>
+                            <input type="email" id="donorEmail" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="donorPhone">Phone Number *</label>
+                            <input type="tel" id="donorPhone" placeholder="0244000000" required>
+                        </div>
+
+                        <div class="payment-summary">
+                            <div class="summary-row">
+                                <span>Donation Amount:</span>
+                                <span id="summaryAmount">GH₵ 0</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Processing Fee:</span>
+                                <span id="summaryFee">GH₵ 0</span>
+                            </div>
+                            <div class="summary-row summary-total">
+                                <span>Total:</span>
+                                <span id="summaryTotal">GH₵ 0</span>
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-primary btn-large" id="donateBtn" style="width: 100%;">
+                            💝 Donate Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- International Donations -->
+                <div class="donation-method" id="international">
+                    <div class="donation-icon">🌍</div>
+                    <h3>International Donors</h3>
+                    <p>For donors outside Ghana - Support us through our secure GoFundMe campaign. Accepts credit cards, PayPal, and other international payment methods.</p>
+                    
+                    <div class="gofundme-card">
+                        <h3>🎯 Our GoFundMe Campaign</h3>
+                        <p>Join donors from around the world supporting stroke care in Ghana. Transparent tracking and regular updates on equipment purchases.</p>
+                        <a href="https://gofundme.com/judah-praise-2026" target="_blank" class="btn btn-outline btn-large" style="width: 100%; margin-top: var(--spacing-md);">
+                            Donate via GoFundMe
+                        </a>
+                    </div>
+
+                    <div style="margin-top: var(--spacing-lg); padding: var(--spacing-lg); background: var(--color-light-gray); border-radius: var(--border-radius);">
+                        <h4>International Payment Options:</h4>
+                        <ul style="text-align: left; color: var(--color-text-light);">
+                            <li>💳 Credit & Debit Cards (Visa, Mastercard, Amex)</li>
+                            <li>🎯 PayPal</li>
+                            <li>🏧 Bank Transfers</li>
+                            <li>📱 Digital Wallets (Apple Pay, Google Pay)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="trust-indicators">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <div class="trust-icon">🔒</div>
+                    <h4>Secure Payments</h4>
+                    <p>All transactions protected by bank-level encryption and PCI compliance</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">📊</div>
+                    <h4>Full Transparency</h4>
+                    <p>Track every donation and see exactly how funds purchase medical equipment</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">🏥</div>
+                    <h4>Direct Impact</h4>
+                    <p>100% of donations go to medical equipment - administrative costs covered separately</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">📋</div>
+                    <h4>Tax Receipts</h4>
+                    <p>Official donation receipts provided for all contributions above GH₵50</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact for Large Donations -->
+    <section style="padding: var(--spacing-2xl) 0; background-color: var(--color-off-white); text-align: center;">
+        <div class="container">
+            <h3 style="color: var(--color-primary); margin-bottom: var(--spacing-md);">Planning a Large Donation or Corporate Sponsorship?</h3>
+            <p style="margin-bottom: var(--spacing-lg); max-width: 600px; margin-left: auto; margin-right: auto;">
+                For donations above GH₵10,000 or corporate partnerships, our team can provide personalized support, 
+                custom payment arrangements, and detailed impact reporting.
+            </p>
+            <a href="contact.html" class="btn btn-secondary btn-large">Contact Our Team</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Judah Praise 2026</h3>
+                    <p>CMF-KATH Ghana</p>
+                    <p>Christian Medical Fellowship</p>
+                    <p>Komfo Anokye Teaching Hospital</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../">Home</a></li>
+                        <li><a href="impact.html">Past Impact</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@judahpraise.org</p>
+                    <p>Phone: +233 XX XXX XXXX</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Security</h4>
+                    <p>PCI DSS Compliant</p>
+                    <p>256-bit SSL Encryption</p>
+                    <p>Fraud Protection</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Judah Praise | CMF-KATH Ghana | All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Paystack Script -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/donations.js"></script>
+</body>
+</html>

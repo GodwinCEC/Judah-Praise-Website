@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Impact | Judah Praise | CMF-KATH Ghana Medical Projects</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore 8 years of medical impact through Judah Praise concerts. From stroke monitors to pediatric oncology equipment - see how your donations transform healthcare in Ghana.">
+    <meta name="keywords" content="Judah Praise impact, CMF-KATH projects, Ghana medical equipment, hospital donations, healthcare transformation">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+    /* Additional styles for Impact page */
+    .page-header {
+        background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+        color: var(--color-white);
+        padding: calc(70px + var(--spacing-2xl)) 0 var(--spacing-2xl) 0;
+        text-align: center;
+    }
+
+    .page-header h1 {
+        color: var(--color-white);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .timeline-section {
+        padding: var(--spacing-3xl) 0;
+        background-color: var(--color-off-white);
+    }
+
+    .timeline-section h2 {
+        text-align: center;
+        color: var(--color-primary);
+        margin-bottom: var(--spacing-2xl);
+    }
+
+    .timeline {
+        position: relative;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .timeline::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 3px;
+        height: 100%;
+        background: linear-gradient(to bottom, var(--color-primary), var(--color-primary-light));
+        z-index: 1;
+    }
+
+    .timeline-item {
+        position: relative;
+        margin-bottom: var(--spacing-3xl);
+        display: grid;
+        grid-template-columns: 1fr 100px 1fr;
+        gap: var(--spacing-xl);
+        align-items: start;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+        order: 3;
+    }
+
+    .timeline-item:nth-child(even) .timeline-image {
+        order: 1;
+    }
+
+    .timeline-marker {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .timeline-number {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+        color: var(--color-white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 1.125rem;
+        box-shadow: var(--shadow-medium);
+    }
+
+    .timeline-content {
+        background: var(--color-white);
+        padding: var(--spacing-xl);
+        border-radius: var(--border-radius-lg);
+        box-shadow: var(--shadow-light);
+        border-left: 4px solid var(--color-primary);
+    }
+
+    .timeline-content h3 {
+        color: var(--color-primary);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .timeline-description {
+        margin-bottom: var(--spacing-lg);
+        line-height: 1.6;
+    }
+
+    .timeline-stats {
+        display: flex;
+        gap: var(--spacing-lg);
+    }
+
+    .stat {
+        text-align: center;
+    }
+
+    .stat-number {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--color-primary);
+        font-family: var(--font-display);
+    }
+
+    .stat-label {
+        font-size: 0.875rem;
+        color: var(--color-text-light);
+    }
+
+    .timeline-image {
+        position: relative;
+        border-radius: var(--border-radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-medium);
+        background: var(--color-light-gray);
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-text-light);
+        font-style: italic;
+    }
+
+    .timeline-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform var(--transition-base);
+    }
+
+    .timeline-image:hover img {
+        transform: scale(1.05);
+    }
+
+    .impact-summary {
+        padding: var(--spacing-3xl) 0;
+        background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+        color: var(--color-white);
+    }
+
+    .impact-summary h2 {
+        text-align: center;
+        color: var(--color-white);
+        margin-bottom: var(--spacing-2xl);
+    }
+
+    .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: var(--spacing-xl);
+    }
+
+    .summary-card {
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        padding: var(--spacing-xl);
+        border-radius: var(--border-radius-lg);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .summary-icon {
+        font-size: 3rem;
+        margin-bottom: var(--spacing-md);
+        display: block;
+    }
+
+    .summary-number {
+        display: block;
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: var(--spacing-sm);
+        font-family: var(--font-display);
+    }
+
+    .summary-label {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    .next-project {
+        padding: var(--spacing-3xl) 0;
+        background-color: var(--color-white);
+        text-align: center;
+    }
+
+    .next-content h2 {
+        color: var(--color-primary);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .next-content p {
+        font-size: 1.125rem;
+        max-width: 600px;
+        margin: 0 auto var(--spacing-xl) auto;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        .timeline::before {
+            left: 30px;
+        }
+
+        .timeline-item {
+            grid-template-columns: 60px 1fr;
+            gap: var(--spacing-md);
+            margin-left: 0;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content,
+        .timeline-item:nth-child(even) .timeline-image {
+            order: initial;
+        }
+
+        .timeline-marker {
+            justify-content: flex-start;
+        }
+
+        .timeline-number {
+            width: 60px;
+            height: 60px;
+            font-size: 1rem;
+        }
+
+        .timeline-image {
+            grid-column: 1 / -1;
+            margin-top: var(--spacing-md);
+        }
+
+        .timeline-stats {
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+
+        .summary-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .timeline-content {
+            padding: var(--spacing-lg);
+        }
+
+        .summary-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .summary-card {
+            padding: var(--spacing-lg);
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="../">
+                    <img src="../assets/images/icons/logo.png" alt="Judah Praise" class="logo" width="120" height="40">
+                </a>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../" class="nav-link">Home</a></li>
+                <li><a href="impact.html" class="nav-link active">Past Impact</a></li>
+                <li><a href="donate.html" class="nav-link">Donate</a></li>
+                <li><a href="store.html" class="nav-link">Store</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>Eight Years of Transforming Lives</h1>
+                <p class="lead">
+                    Since 2018, Judah Praise has been the catalyst for extraordinary medical breakthroughs 
+                    at Komfo Anokye Teaching Hospital. Each concert, each donation, each prayer has 
+                    contributed to a legacy of healing that spans across departments and touches 
+                    thousands of lives.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <div class="container">
+            <h2>Our Journey of Impact</h2>
+            <div class="timeline">
+                <!-- 2018 -->
+                <div class="timeline-item" data-year="2018">
+                    <div class="timeline-marker">
+                        <div class="timeline-number">2018</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Stroke Monitoring System</h3>
+                        <p class="timeline-description">
+                            Our inaugural project launched with the acquisition of advanced stroke monitoring 
+                            equipment, establishing the foundation for rapid response stroke care. This system 
+                            enabled 24/7 monitoring of critical stroke patients.
+                        </p>
+                        <div class="timeline-stats">
+                            <div class="stat">
+                                <span class="stat-number">1,200+</span>
+                                <span class="stat-label">Patients Monitored</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">85%</span>
+                                <span class="stat-label">Recovery Rate</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-image">
+                        [Stroke Monitoring Equipment Photo]
+                    </div>
+                </div>
+
+                <!-- 2019 -->
+                <div class="timeline-item" data-year="2019">
+                    <div class="timeline-marker">
+                        <div class="timeline-number">2019</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Pediatric Surgery Equipment</h3>
+                        <p class="timeline-description">
+                            Focused on our youngest patients, we provided specialized surgical equipment for 
+                            children's operations, including micro-surgical instruments and pediatric anesthesia 
+                            monitors that transformed child surgical outcomes.
+                        </p>
+                        <div class="timeline-stats">
+                            <div class="stat">
+                                <span class="stat-number">800+</span>
+                                <span class="stat-label">Child Surgeries</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">95%</span>
+                                <span class="stat-label">Success Rate</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-image">
+                        [Pediatric Surgery Equipment Photo]
+                    </div>
+                </div>
+
+                <!-- 2020 -->
+                <div class="timeline-item" data-year="2020">
+                    <div class="timeline-marker">
+                        <div class="timeline-number">2020</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Bilirubin Meters for Newborns</h3>
+                        <p class="timeline-description">
+                            During the challenging COVID-19 year, we pivoted to support newborn care with 
+                            advanced bilirubin meters, enabling early detection and treatment of jaundice 
+                            in premature and full-term babies.
+                        </p>
+                        <div class="timeline-stats">
+                            <div class="stat">
+                                <span class="stat-number">2,500+</span>
+                                <span class="stat-label">Newborns Screened</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">92%</span>
+                                <span class="stat-label">Early Detection</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-image">
+                        [Bilirubin Meters Photo]
+                    </div>
+                </div>
+
+                <!-- 2022 -->
+                <div class="timeline-item" data-year="2022">
+                    <div class="timeline-marker">
+                        <div class="timeline-number">2022</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Burns Unit Renovation</h3>
+                        <p class="timeline-description">
+                            A comprehensive upgrade to the burns treatment facility, including specialized 
+                            wound care equipment, infection control systems, and patient comfort amenities 
+                            that revolutionized burn care protocols.
+                        </p>
+                        <div class="timeline-stats">
+                            <div class="stat">
+                                <span class="stat-number">600+</span>
+                                <span class="stat-label">Burn Patients Treated</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">78%</span>
+                                <span class="stat-label">Improved Recovery</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-image">
+                        [Burns Unit Renovation Photo]
+                    </div>
+                </div>
+
+                <!-- 2023 -->
+                <div class="timeline-item" data-year="2023">
+                    <div class="timeline-marker">
+                        <div class="timeline-number">2023</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Pediatric Oncology Ward</h3>
+                        <p class="timeline-description">
+                            Our most ambitious project yet—establishing a dedicated pediatric cancer treatment 
+                            ward with chemotherapy equipment, isolation rooms, and family support facilities 
+                            for children fighting cancer.
+                        </p>
+                        <div class="timeline-stats">
+                            <div class="stat">
+                                <span class="stat-number">150+</span>
+                                <span class="stat-label">Children in Treatment</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">68%</span>
+                                <span class="stat-label">Remission Rate</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-image">
+                        [Pediatric Oncology Ward Photo]
+                    </div>
+                </div>
+
+                <!-- 2024 -->
+                <div class="timeline-item" data-year="2024">
+                    <div class="timeline-marker">
+                        <div class="timeline-number">2024</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Pediatric ICU Expansion</h3>
+                        <p class="timeline-description">
+                            Expanding critical care capacity for children with advanced ventilators, monitoring 
+                            systems, and life support equipment. This project doubled the PICU capacity and 
+                            introduced cutting-edge pediatric life support technology.
+                        </p>
+                        <div class="timeline-stats">
+                            <div class="stat">
+                                <span class="stat-number">400+</span>
+                                <span class="stat-label">Critical Cases</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">89%</span>
+                                <span class="stat-label">Survival Rate</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-image">
+                        [Pediatric ICU Expansion Photo]
+                    </div>
+                </div>
+
+                <!-- 2025 -->
+                <div class="timeline-item" data-year="2025">
+                    <div class="timeline-marker">
+                        <div class="timeline-number">2025</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Renal Dialysis Center</h3>
+                        <p class="timeline-description">
+                            The newest addition to our impact legacy—a state-of-the-art renal dialysis center 
+                            serving kidney patients across the region. Modern dialysis machines and water 
+                            treatment systems provide life-sustaining care.
+                        </p>
+                        <div class="timeline-stats">
+                            <div class="stat">
+                                <span class="stat-number">300+</span>
+                                <span class="stat-label">Patients on Dialysis</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">20+</span>
+                                <span class="stat-label">Machines Installed</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-image">
+                        [Renal Dialysis Center Photo]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Summary -->
+    <section class="impact-summary">
+        <div class="container">
+            <h2>Cumulative Impact</h2>
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <div class="summary-icon">🏥</div>
+                    <div class="summary-number">7</div>
+                    <div class="summary-label">Departments Transformed</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-icon">❤️</div>
+                    <div class="summary-number">15,000+</div>
+                    <div class="summary-label">Lives Directly Impacted</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-icon">🎯</div>
+                    <div class="summary-number">$2.4M</div>
+                    <div class="summary-label">Medical Equipment Value</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-icon">🌟</div>
+                    <div class="summary-number">8</div>
+                    <div class="summary-label">Years of Excellence</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Project Teaser -->
+    <section class="next-project">
+        <div class="container">
+            <div class="next-content">
+                <h2>The Next Chapter: Stroke Care 2026</h2>
+                <p>
+                    Building on eight years of proven impact, Judah Praise 2026 will focus on advanced 
+                    stroke monitoring and emergency response systems. Together, we will save more lives 
+                    and give hope to families facing stroke emergencies.
+                </p>
+                <a href="donate.html" class="btn btn-primary btn-large">Join the 2026 Mission</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Judah Praise 2026</h3>
+                    <p>CMF-KATH Ghana</p>
+                    <p>Christian Medical Fellowship</p>
+                    <p>Komfo Anokye Teaching Hospital</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../">Home</a></li>
+                        <li><a href="impact.html">Past Impact</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@judahpraise.org</p>
+                    <p>Phone: +233 XX XXX XXXX</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Transparency</h4>
+                    <p>All donations tracked</p>
+                    <p>Financial reports available</p>
+                    <p>Equipment receipts public</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Judah Praise | CMF-KATH Ghana | All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

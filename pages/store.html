@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Coming Soon | Judah Praise Merchandise | T-Shirts & More</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Judah Praise merchandise store coming soon. T-shirts, apparel, and accessories to support stroke care project in Ghana. Sign up for launch notifications.">
+    <meta name="keywords" content="Judah Praise t-shirts, CMF-KATH merchandise, Ghana medical charity apparel, coming soon store">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+    .coming-soon-hero {
+        background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+        color: var(--color-white);
+        padding: calc(70px + var(--spacing-3xl)) 0 var(--spacing-3xl) 0;
+        text-align: center;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .coming-soon-content h1 {
+        color: var(--color-white);
+        margin-bottom: var(--spacing-lg);
+        font-size: clamp(2.5rem, 5vw, 4rem);
+    }
+
+    .coming-soon-subtitle {
+        font-size: 1.5rem;
+        margin-bottom: var(--spacing-xl);
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 300;
+    }
+
+    .preview-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--spacing-xl);
+        margin: var(--spacing-2xl) 0;
+    }
+
+    .preview-item {
+        background: rgba(255, 255, 255, 0.1);
+        padding: var(--spacing-xl);
+        border-radius: var(--border-radius-lg);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        text-align: center;
+        transition: transform var(--transition-base);
+    }
+
+    .preview-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .preview-icon {
+        font-size: 4rem;
+        margin-bottom: var(--spacing-md);
+        display: block;
+    }
+
+    .preview-item h3 {
+        color: var(--color-white);
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .preview-item p {
+        color: rgba(255, 255, 255, 0.8);
+        margin: 0;
+    }
+
+    .newsletter-section {
+        background: var(--color-white);
+        padding: var(--spacing-3xl) 0;
+    }
+
+    .newsletter-content {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .newsletter-content h2 {
+        color: var(--color-primary);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .newsletter-form {
+        display: flex;
+        gap: var(--spacing-md);
+        margin: var(--spacing-xl) 0;
+        flex-wrap: wrap;
+    }
+
+    .newsletter-input {
+        flex: 1;
+        min-width: 250px;
+        padding: var(--spacing-md);
+        border: 2px solid var(--color-gray);
+        border-radius: var(--border-radius);
+        font-size: 1rem;
+        transition: border-color var(--transition-base);
+    }
+
+    .newsletter-input:focus {
+        outline: none;
+        border-color: var(--color-primary);
+    }
+
+    .newsletter-btn {
+        padding: var(--spacing-md) var(--spacing-xl);
+        background: var(--color-primary);
+        color: var(--color-white);
+        border: none;
+        border-radius: var(--border-radius);
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color var(--transition-base);
+        white-space: nowrap;
+    }
+
+    .newsletter-btn:hover {
+        background: var(--color-primary-dark);
+    }
+
+    .features-section {
+        padding: var(--spacing-3xl) 0;
+        background: var(--color-off-white);
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: var(--spacing-xl);
+    }
+
+    .feature-card {
+        background: var(--color-white);
+        padding: var(--spacing-xl);
+        border-radius: var(--border-radius-lg);
+        box-shadow: var(--shadow-light);
+        text-align: center;
+        border-top: 4px solid var(--color-primary);
+    }
+
+    .feature-icon {
+        font-size: 3rem;
+        margin-bottom: var(--spacing-md);
+        display: block;
+        color: var(--color-primary);
+    }
+
+    .feature-card h3 {
+        color: var(--color-primary);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .feature-card p {
+        color: var(--color-text-light);
+        margin: 0;
+    }
+
+    .timeline-section {
+        background: var(--color-white);
+        padding: var(--spacing-3xl) 0;
+        text-align: center;
+    }
+
+    .timeline-content h2 {
+        color: var(--color-primary);
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .timeline-steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: var(--spacing-xl);
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .timeline-step {
+        position: relative;
+    }
+
+    .step-number {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: var(--color-primary);
+        color: var(--color-white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 0 auto var(--spacing-md) auto;
+    }
+
+    .step-title {
+        font-weight: 600;
+        color: var(--color-primary);
+        margin-bottom: var(--spacing-xs);
+    }
+
+    .step-description {
+        color: var(--color-text-light);
+        font-size: 0.875rem;
+    }
+
+    @media (max-width: 768px) {
+        .newsletter-form {
+            flex-direction: column;
+        }
+
+        .newsletter-input {
+            min-width: auto;
+        }
+
+        .preview-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .timeline-steps {
+            grid-template-columns: 1fr;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="../">
+                    <img src="../assets/images/icons/logo.png" alt="Judah Praise" class="logo" width="120" height="40">
+                </a>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../" class="nav-link">Home</a></li>
+                <li><a href="impact.html" class="nav-link">Past Impact</a></li>
+                <li><a href="donate.html" class="nav-link">Donate</a></li>
+                <li><a href="store.html" class="nav-link active">Store</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Coming Soon Hero -->
+    <section class="coming-soon-hero">
+        <div class="container">
+            <div class="coming-soon-content">
+                <h1>Merchandise Store</h1>
+                <p class="coming-soon-subtitle">Coming Soon</p>
+                <p class="lead">
+                    Beautiful, high-quality apparel and accessories are on the way! Support the 
+                    Judah Praise mission while wearing your faith and commitment to healing proudly.
+                </p>
+
+                <!-- Preview Items -->
+                <div class="preview-grid">
+                    <div class="preview-item">
+                        <span class="preview-icon">👕</span>
+                        <h3>Premium T-Shirts</h3>
+                        <p>Soft, sustainable cotton with inspiring Judah Praise designs</p>
+                    </div>
+                    <div class="preview-item">
+                        <span class="preview-icon">🎽</span>
+                        <h3>Tank Tops</h3>
+                        <p>Comfortable activewear for Ghana's warm climate</p>
+                    </div>
+                    <div class="preview-item">
+                        <span class="preview-icon">👒</span>
+                        <h3>Caps & Accessories</h3>
+                        <p>Stylish headwear and accessories for everyday wear</p>
+                    </div>
+                    <div class="preview-item">
+                        <span class="preview-icon">🎒</span>
+                        <h3>Tote Bags</h3>
+                        <p>Eco-friendly bags perfect for daily use</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: var(--spacing-2xl);">
+                    <a href="../pages/donate.html" class="btn btn-outline btn-large">Donate While We Prepare</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Be the First to Know</h2>
+                <p>
+                    Join our exclusive list to get early access to new merchandise, special discounts, 
+                    and behind-the-scenes updates from the Judah Praise team.
+                </p>
+
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                    <button type="submit" class="newsletter-btn">🔔 Notify Me</button>
+                </form>
+
+                <p style="color: var(--color-text-light); font-size: 0.875rem; margin-top: var(--spacing-md);">
+                    We respect your privacy. No spam, just meaningful updates about our mission and store.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 style="text-align: center; color: var(--color-primary); margin-bottom: var(--spacing-2xl);">What to Expect</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🌱</span>
+                    <h3>Sustainable Materials</h3>
+                    <p>Eco-friendly fabrics sourced responsibly, reflecting our commitment to caring for creation and community.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🎨</span>
+                    <h3>Meaningful Designs</h3>
+                    <p>Every design tells the story of healing, hope, and the powerful intersection of faith and medicine.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🚚</span>
+                    <h3>Ghana & International Shipping</h3>
+                    <p>Fast, affordable delivery throughout Ghana with international shipping options for global supporters.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">💝</span>
+                    <h3>Direct Impact</h3>
+                    <p>A portion of every purchase goes directly toward medical equipment, maximizing your contribution to healing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Launch Timeline -->
+    <section class="timeline-section">
+        <div class="container">
+            <div class="timeline-content">
+                <h2>Launch Timeline</h2>
+                <div class="timeline-steps">
+                    <div class="timeline-step">
+                        <div class="step-number">1</div>
+                        <div class="step-title">Design Phase</div>
+                        <div class="step-description">Creating meaningful designs with local artists</div>
+                    </div>
+                    
+                    <div class="timeline-step">
+                        <div class="step-number">2</div>
+                        <div class="step-title">Production Setup</div>
+                        <div class="step-description">Sourcing sustainable materials and local production</div>
+                    </div>
+                    
+                    <div class="timeline-step">
+                        <div class="step-number">3</div>
+                        <div class="step-title">Quality Testing</div>
+                        <div class="step-description">Ensuring premium quality and comfortable fit</div>
+                    </div>
+                    
+                    <div class="timeline-step">
+                        <div class="step-number">4</div>
+                        <div class="step-title">Store Launch</div>
+                        <div class="step-description">Grand opening with exclusive early-bird offers</div>
+                    </div>
+                </div>
+
+                <div style="margin-top: var(--spacing-2xl); padding: var(--spacing-xl); background: var(--color-light-gray); border-radius: var(--border-radius-lg);">
+                    <h3 style="color: var(--color-primary); margin-bottom: var(--spacing-md);">Expected Launch: Q2 2026</h3>
+                    <p style="color: var(--color-text-light); margin: 0;">
+                        We're taking time to create something truly special that reflects the heart of our mission 
+                        and supports both local artisans and the global Judah Praise community.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="background: var(--color-primary); color: var(--color-white); padding: var(--spacing-2xl) 0; text-align: center;">
+        <div class="container">
+            <h3 style="color: var(--color-white); margin-bottom: var(--spacing-md);">Can't Wait to Support?</h3>
+            <p style="margin-bottom: var(--spacing-lg); color: rgba(255, 255, 255, 0.9);">
+                While our store prepares to launch, you can still make a powerful impact by donating 
+                directly to our stroke care project. Every contribution brings healing closer.
+            </p>
+            <a href="donate.html" class="btn btn-outline btn-large">Donate to Save Lives Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Judah Praise 2026</h3>
+                    <p>CMF-KATH Ghana</p>
+                    <p>Christian Medical Fellowship</p>
+                    <p>Komfo Anokye Teaching Hospital</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../">Home</a></li>
+                        <li><a href="impact.html">Past Impact</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@judahpraise.org</p>
+                    <p>Phone: +233 XX XXX XXXX</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Store Updates</h4>
+                    <p>Newsletter subscribers first</p>
+                    <p>Early access discounts</p>
+                    <p>Behind-the-scenes content</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Judah Praise | CMF-KATH Ghana | All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+    
+    <script>
+    // Newsletter form handler
+    document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = this.querySelector('input[type="email"]').value;
+        
+        // Here you would typically send to your newsletter service
+        alert('Thank you! We\'ll notify you when the store launches. 📧');
+        this.querySelector('input[type="email"]').value = '';
+    });
+    </script>
+</body>
+</html>
