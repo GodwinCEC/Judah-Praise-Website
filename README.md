@@ -255,4 +255,4 @@ This project is created for CMF-KATH Ghana's Judah Praise medical fundraising in
 **Built with ❤️ for saving lives through stroke care in Ghana**
 
 For technical support: Create an issue in this repository  
-For medical inquiries: Contact CMF-KATH Ghana directly
+For medical inquiries: Contact CMF-KATH Ghana directly# Judah-Praise-Website
