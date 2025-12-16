@@ -11,11 +11,16 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
+temp.md
 # Build outputs
 /dist
 /build
 .firebase/
 .firebase
+
+#my own
+js/donate.js
+functions
 
 # IDE files
 .vscode/

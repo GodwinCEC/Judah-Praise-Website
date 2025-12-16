@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Donation - Judah Praise</title>
+    <meta name="description" content="Support our healthcare initiatives through secure online donation. Help us provide essential medical equipment to Komfo Anokye Teaching Hospital.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/donate-form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Georgia:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- Paystack Inline Script -->
+    <script src="https://js.paystack.co/v2/inline.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo.jpg" alt="Judah Praise CMF Logo" class="logo-img">
+            </a>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="donate.html" class="nav-link">Donate</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <!-- <section class="page-header">
+        <div class="container">
+            <h1>Complete Your Donation</h1>
+            <p>Secure payment powered by Paystack - Support the Stroke Project 2026</p>
+        </div>
+    </section> -->
+
+    <!-- Donation Form Section -->
+    <section class="donation-form-section">
+        <div class="container">
+            <div class="form-wrapper">
+                <div class="form-container">
+                    <div class="form-header">
+                        <div class="form-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h2>Donate</h2>
+                        <p>Fill in your details to proceed with your donation via Paystack</p>
+                    </div>
+
+                    <form id="donation-form" class="donation-form">
+                        <!-- Amount Selection -->
+                        <div class="form-section">
+                            <label class="section-label">Amount (₵)</label>
+                            <div class="custom-amount-wrapper">
+                                <input type="number" id="custom-amount" placeholder="Enter donation amount" min="1" max="1000000" required>
+                            </div>
+                            <div class="selected-amount" id="selected-amount-display" style="display: none;">
+                                <span>Selected Amount: </span>
+                                <span id="amount-value" class="amount-display">₵0</span>
+                            </div>
+                        </div>
+
+                        <!-- Donor Information -->
+                        <div class="form-section">
+                            <!-- <label class="section-label">Your Information</label> -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="donor-name">Full Name *</label>
+                                    <input type="text" id="donor-name" required placeholder="Enter your full name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="donor-email">Email Address *</label>
+                                    <input type="email" id="donor-email" required placeholder="Enter your email">
+                                </div>
+                            </div>
+                            <!-- <div class="form-group">
+                                <label for="donor-phone">Phone Number (Optional)</label>
+                                <input type="tel" id="donor-phone" placeholder="+233 XX XXX XXXX">
+                            </div> -->
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="donate-submit-btn" id="donate-submit-btn" disabled>
+                            <i class="fas fa-credit-card"></i>
+                            <span>Proceed to Payment</span>
+                        </button>
+                    </form>
+
+                    <!-- Security Info -->
+                    <div class="security-info">
+                        <div class="security-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secured by Paystack</span>
+                        </div>
+                        <div class="security-item">
+                            <i class="fas fa-lock"></i>
+                            <span>SSL Encrypted</span>
+                        </div>
+                        <div class="security-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>PCI Compliant</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Info Section (moved below) -->
+    <section class="project-info-section">
+        <div class="container">
+            <div class="project-card">
+                <h3>Stroke Project 2026</h3>
+                <p>Your donation helps save lives.</p>
+                
+                <!-- <div class="project-progress">
+                    <div class="progress-header">
+                        <span>Progress</span>
+                        <span>16% Complete</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 16%"></div>
+                    </div>
+                </div> -->
+
+                <div class="project-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Patients to Benefit</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">Years of Impact</span>
+                    </div>
+                </div>
+
+                <div class="impact-items">
+                    <div class="impact-item">
+                        <i class="fas fa-check"></i>
+                        <span>Stroke monitoring equipment</span>
+                    </div>
+                    <div class="impact-item">
+                        <i class="fas fa-check"></i>
+                        <span>Patient rehabilitation aids</span>
+                    </div>
+                    <div class="impact-item">
+                        <i class="fas fa-check"></i>
+                        <span>Diagnostic instruments</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-branding">
+                <div class="footer-logo">
+                    <img src="images/logo.jpg" alt="Judah Praise CMF Logo" class="footer-logo-img">
+                    <div class="footer-brand-text">
+                        <h3>Judah Praise</h3>
+                        <p>Christian Medical Fellowship • KATH</p>
+                    </div>
+                </div>
+                <p class="footer-mission">Serving our community through faith-based healthcare support since 2017.</p>
+            </div>
+
+            <div class="footer-content">
+                <div class="footer-section banking">
+                    <h4>Banking Details</h4>
+                    <div class="bank-details">
+                        <div class="bank-info">
+                            <p><strong>Bank:</strong> Ecobank Ghana</p>
+                            <p><strong>Branch:</strong> Bantama Branch</p>
+                            <p><strong>Account No:</strong> 1441001540878</p>
+                            <p><strong>Mobile Money:</strong> 0598981798</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <p>Clinical Students Hostel</p>
+                                <p>Post Office Box KS 7752</p>
+                                <p>KATH-Kumasi, Ghana</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p><a href="mailto:judahpraise18@gmail.com">judahpraise18@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/cmfjudahpraise" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/cmfjudahpraise" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/cmf-judah-praise" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@cmfjudahpraise" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="footer-copy">&copy; 2025 CMF Judah Praise</p>
+                    <p class="footer-copy">All rights reserved</p>
+                    <p class="footer-credit">
+                        Built by
+                        <a href="https://godwinelison.com" target="_blank" rel="noopener" class="footer-author">
+                            Godwin Mawulikplim
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="success-modal">
+        <div class="success-content">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Payment Successful!</h3>
+            <p>Thank you for your generous donation to the Stroke Project 2026. Your contribution will help save lives at Komfo Anokye Teaching Hospital.</p>
+            <button class="close-success-btn" id="close-success">Continue</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/donate-form.js"></script>
+</body>
+</html>

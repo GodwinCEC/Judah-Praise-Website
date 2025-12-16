@@ -5,7 +5,7 @@ A production-ready, minimalist charity website for the Judah Praise medical fund
 ## 🎯 Project Overview
 
 **Tech Stack:** Pure HTML + CSS + Vanilla JavaScript  
-**Hosting:** Firebase Hosting (Free Tier)  
+**Hosting:** Firebase Hosting
 **Payments:** Paystack (Mobile Money + Cards)  
 **Design:** Minimalist, trust-focused, mobile-first  
 
@@ -26,75 +26,36 @@ A production-ready, minimalist charity website for the Judah Praise medical fund
 
 ```
 judah-praise-website/
-├── index.html                 # Homepage
-├── pages/
-│   ├── impact.html           # Past Impact Timeline
-│   ├── donate.html           # Donation & Payment Page
-│   ├── store.html            # Store Coming Soon
-│   └── contact.html          # Contact & Team Info
-├── assets/
-│   ├── css/
-│   │   └── main.css          # All styles (no frameworks)
-│   ├── js/
-│   │   ├── main.js           # Core functionality
-│   │   └── donations.js      # Paystack integration
-│   └── images/
-│       ├── hero/             # Hero background images
-│       ├── gallery/          # Timeline & impact photos
-│       ├── icons/            # Logo, favicon, etc.
-│       └── team/             # Team member photos
-├── firebase.json             # Firebase Hosting config
-├── .env.example              # Environment variables template
+├── index.html               # Homepage
+├── about.html               # About page
+├── contact.html             # Contact page
+├── donate.html              # Donation & Payment page
+├── project.html             # Project / Portfolio page
+├── css/
+│   ├── styles.css           # Global styles shared across pages
+│   ├── home.css             # Styles specific to index.html
+│   ├── about.css            # Styles specific to about.html
+│   ├── contact.css          # Styles specific to contact.html
+│   ├── donate.css           # Styles specific to donate.html
+│   └── project.css          # Styles specific to project.html
+├── js/
+│   ├── main.js              # Shared JS across pages
+│   ├── home.js              # JS specific to index.html
+│   ├── about.js             # JS specific to about.html
+│   ├── contact.js           # JS specific to contact.html
+│   ├── donate.js            # JS specific to donate.html
+│   └── project.js           # JS specific to project.html
+├── images/
+│   ├── logo.png             # Logo
+│   ├── favicon.ico          # Favicon
+│   ├── hero-bg.jpg          # Homepage hero image
+│   └── other images...      # Any other images for pages
+├── firebase.json            # Firebase Hosting config
+├── .env.example             # Environment variables template
 ├── .gitignore               # Git ignore rules
-└── README.md                # This file
+└── README.md                # Project documentation
+
 ```
-
-## 🚀 Quick Start
-
-### Prerequisites
-- Node.js & npm installed
-- Firebase CLI: `npm install -g firebase-tools`
-- Git installed
-- Paystack account for payments
-
-### 1. Clone & Setup
-
-```bash
-# Clone the repository
-git clone https://github.com/YOUR_USERNAME/judah-praise-website.git
-cd judah-praise-website
-
-# Setup environment variables
-cp .env.example .env
-# Edit .env with your actual Paystack keys and contact info
-```
-
-### 2. Configure Paystack
-
-Get your keys from [Paystack Dashboard](https://dashboard.paystack.com/):
-
-```javascript
-// In assets/js/donations.js, update:
-const PAYSTACK_CONFIG = {
-    publicKey: 'pk_test_your_actual_test_key_here',  // Use test keys first
-    currency: 'GHS'
-};
-```
-
-### 3. Deploy to Firebase
-
-```bash
-# Login to Firebase
-firebase login
-
-# Initialize project
-firebase init hosting
-
-# Deploy
-firebase deploy
-```
-
-Your site will be live at: `https://your-project.web.app`
 
 ## 💳 Payment Integration
 
@@ -111,12 +72,6 @@ Your site will be live at: `https://your-project.web.app`
 - PayPal
 - Bank transfers
 - Digital wallets
-
-### Testing Payments
-
-Use Paystack test cards:
-- **Success:** `4084084084084081`
-- **Decline:** `4084084084084084`
 
 ## 🎨 Design System
 
@@ -165,22 +120,6 @@ Ready for integration with:
 - Paystack transaction tracking
 - Custom donation analytics
 
-## 🔧 Customization
-
-### Adding New Content
-
-1. **Past Impact Projects:** Edit `pages/impact.html`
-2. **Team Members:** Update `pages/contact.html`
-3. **Donation Amounts:** Modify `pages/donate.html`
-4. **Colors/Fonts:** Edit CSS custom properties in `assets/css/main.css`
-
-### Adding Images
-
-1. Place optimized images in appropriate `assets/images/` folders
-2. Follow naming convention: `project-year-description.jpg`
-3. Create WebP versions for better performance
-4. Update alt text for accessibility
-
 ## 🌍 Deployment Environments
 
 ### Test Environment
@@ -189,7 +128,7 @@ Ready for integration with:
 - **Purpose:** Testing payments and features
 
 ### Production Environment
-- **URL:** `https://judahpraise.web.app` (or custom domain)
+- **URL:** `https://cmfjudahpraise.com`
 - **Paystack:** Live keys
 - **Purpose:** Real donations and public access
 
@@ -206,38 +145,6 @@ Ready for integration with:
 - **Technical Issues:** Create GitHub issue
 - **Payment Problems:** Contact Paystack support
 - **Hosting Issues:** Check Firebase status
-
-## 🤝 Contributing
-
-### Content Updates
-1. Edit HTML files directly
-2. Test locally: Open `index.html` in browser
-3. Commit changes to Git
-4. Deploy: `firebase deploy`
-
-### Code Changes
-1. Follow existing code style
-2. Test thoroughly on mobile devices
-3. Check payment flows in test mode
-4. Document any breaking changes
-
-## 📋 Launch Checklist
-
-### Pre-Launch
-- [ ] Replace test Paystack keys with live keys
-- [ ] Add real images and content
-- [ ] Update contact information
-- [ ] Test all payment methods
-- [ ] Configure custom domain (optional)
-- [ ] Setup Google Analytics
-- [ ] Test on multiple devices
-
-### Post-Launch
-- [ ] Monitor first donations
-- [ ] Check error logs
-- [ ] Submit to Google Search Console
-- [ ] Share on social media
-- [ ] Monitor performance metrics
 
 ## 📄 License
 
