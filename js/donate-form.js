@@ -18,7 +18,7 @@ function initializeDonationForm() {
     const submitBtn = document.getElementById('donate-submit-btn');
 
     // Custom amount input
-    customAmountInput.addEventListener('input', function() {
+    customAmountInput.addEventListener('input', function () {
         const amount = Math.max(1, parseInt(this.value) || 0);
         selectedAmount = amount;
         updateSelectedAmountDisplay();
@@ -32,11 +32,11 @@ function initializeDonationForm() {
     });
 
     // Form submission
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', function (e) {
         e.preventDefault();
         handleDonationSubmission();
     });
-    
+
     // Initial validation
     validateForm();
 }
@@ -44,7 +44,7 @@ function initializeDonationForm() {
 function updateSelectedAmountDisplay() {
     const display = document.getElementById('selected-amount-display');
     const amountValue = document.getElementById('amount-value');
-    
+
     if (selectedAmount > 0) {
         amountValue.textContent = `₵${selectedAmount.toLocaleString()}`;
         display.style.display = 'flex';
@@ -58,14 +58,14 @@ function validateForm() {
     const email = document.getElementById('donor-email').value.trim();
     const amount = parseInt(document.getElementById('custom-amount').value) || 0;
     const submitBtn = document.getElementById('donate-submit-btn');
-    
-    const isValid = name.length > 0 && 
-                   email.length > 0 && 
-                   isValidEmail(email) && 
-                   amount >= 1;
-    
+
+    const isValid = name.length > 0 &&
+        email.length > 0 &&
+        isValidEmail(email) &&
+        amount >= 1;
+
     submitBtn.disabled = !isValid;
-    
+
     return isValid;
 }
 
@@ -79,35 +79,35 @@ function handleDonationSubmission() {
         showNotification('Please fill all required fields correctly', 'error');
         return;
     }
-    
+
     const amount = parseInt(document.getElementById('custom-amount').value) || 0;
-    
+
     if (amount < 1) {
         showNotification('Minimum donation amount is ₵1', 'error');
         return;
     }
-    
+
     // Update selectedAmount from input
     selectedAmount = amount;
-    
+
     // Collect donor information
     donorInfo = {
         name: document.getElementById('donor-name').value.trim(),
         email: document.getElementById('donor-email').value.trim(),
-        phone: document.getElementById('donor-phone').value.trim() || '',
+        phone: document.getElementById('donor-phone') ? document.getElementById('donor-phone').value.trim() : '',
         amount: selectedAmount
     };
-    
+
     // Show loading state
     const submitBtn = document.getElementById('donate-submit-btn');
     const originalHTML = submitBtn.innerHTML;
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Processing...</span>';
     submitBtn.disabled = true;
-    
+
     // Initiate Paystack payment after short delay
     setTimeout(() => {
         initializePaystackPayment();
-        
+
         // Reset button state
         submitBtn.innerHTML = originalHTML;
         submitBtn.disabled = false;
@@ -121,7 +121,7 @@ function initializePaystackPayment() {
         console.error('Paystack library not loaded');
         return;
     }
-    
+
     const handler = PaystackPop.setup({
         key: PAYSTACK_PUBLIC_KEY,
         email: donorInfo.email,
@@ -155,16 +155,16 @@ function initializePaystackPayment() {
             handlePaymentClosed();
         }
     });
-    
+
     handler.openIframe();
 }
 
 function handlePaymentSuccess(response) {
     console.log('Payment successful:', response);
-    
+
     // Show success modal instead of notification
     showSuccessModal();
-    
+
     // Track the donation
     trackDonationEvent('payment_success', donorInfo.amount, 'paystack');
 }
@@ -177,21 +177,21 @@ function handlePaymentClosed() {
 function showSuccessModal() {
     const modal = document.getElementById('success-modal');
     const closeBtn = document.getElementById('close-success');
-    
+
     if (modal) {
         modal.classList.add('show');
         document.body.style.overflow = 'hidden';
-        
+
         // Close button handler
         if (closeBtn) {
-            closeBtn.onclick = function() {
+            closeBtn.onclick = function () {
                 modal.classList.remove('show');
                 document.body.style.overflow = '';
                 // Optional: Redirect to home page
                 window.location.href = 'index.html';
             };
         }
-        
+
         // Auto-close after 10 seconds
         setTimeout(() => {
             if (modal.classList.contains('show')) {
@@ -212,7 +212,7 @@ function trackDonationEvent(eventType, amount, method) {
         project: 'Stroke Project 2026',
         page: 'donate-form'
     };
-    
+
     console.log('Donation Event:', eventData);
 }
 
@@ -223,7 +223,7 @@ function showNotification(message, type = 'info') {
         <i class="fas fa-${getNotificationIcon(type)}"></i>
         <span>${message}</span>
     `;
-    
+
     notification.style.cssText = `
         position: fixed;
         top: 100px;
@@ -243,15 +243,15 @@ function showNotification(message, type = 'info') {
         max-width: 300px;
         font-weight: 500;
     `;
-    
+
     document.body.appendChild(notification);
-    
+
     // Animate in
     setTimeout(() => {
         notification.style.transform = 'translateX(0)';
         notification.style.opacity = '1';
     }, 100);
-    
+
     // Auto remove after 5 seconds
     setTimeout(() => {
         notification.style.transform = 'translateX(100%)';
